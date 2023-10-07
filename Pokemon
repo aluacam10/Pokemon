@@ -1,0 +1,70 @@
+package Pokemon;
+public class Pokemon {
+    private int level;
+    private String Nombre;
+    private String TipoPokemon;
+
+    public Pokemon(String nombre, String tipo, int nivel) {
+        this.Nombre = Nombre;
+        this.Tipo = TipoPokemon;
+        this.level = level;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getTipoPokemon() {
+        return tipo;
+    }
+
+    public int getlevel() {
+        return level;
+    }
+
+    private void calcular_lesiones(int danio) {
+        this.level -= lesiones;
+        System.out.printf("%s recibe %d puntos de lesiones\n", this.getNombre(), lesiones);
+    }
+
+    public void recibirAtaques(String movimiento) {
+        System.out.printf("%s recibe ATK %s\n", this.getNombre(), movimiento);
+        calculaDanio((int) (Math.random() * 10 + 1));
+    }
+
+    public void atacar(String movimiento, Pokemon pokemon) {
+        System.out.printf("%s ataca a %s con %s\n", this.getNombre(), pokemon.getNombre(), movimiento);
+        pokemon.recibirAtaques(movimiento);
+    }
+}
+
+
+
+package Pokemon;
+
+public class PokemonTierra extends Pokemon {
+    public PokemonTierra(String Nombre) {
+        super(Nombre, "Tierra", 10);
+    }
+}
+
+
+
+
+Pokemon;
+
+public class Batallas {
+    public static void main(String[] args) {
+        PokemonTierra charmander = new PokemonTierra("Rhydon");
+        Pokemon squirtle = new Pokemon("Noibat", "Aire", 10);
+
+        // Rhydon ataca a Noibat
+        Rhydon.atacar("Disparo lodo	", Noibat);
+
+        // Squirtle ataca a Rhydon
+        Noibat.atacar("Ataque aereo", Rhydon);
+
+        // Imprimir los puntos de vida de los Pokémones
+        System.out.println(Rhydon.getNombre() + ": HP " + Rhydon.getHP());
+        System.out.println(Noibat.getNombre() + ": HP " + Noibat.getHP());
+    }
