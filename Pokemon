@@ -41,34 +41,3 @@ public class Pokemon {
         pokemon.recibirAtaques(movimiento);
     }
 }
-
-
-
-package Pokemon;
-
-public class PokemonTierra extends Pokemon {
-    public PokemonTierra(String Nombre) {
-        super(Nombre, "Tierra", 10);
-    }
-}
-
-
-
-
-Pokemon;
-
-public class Batallas {
-    public static void main(String[] args) {
-        PokemonTierra charmander = new PokemonTierra("Rhydon");
-        Pokemon squirtle = new Pokemon("Noibat", "Aire", 10);
-
-        // Rhydon ataca a Noibat
-        Rhydon.atacar("Disparo lodo	", Noibat);
-
-        // Squirtle ataca a Rhydon
-        Noibat.atacar("Ataque aereo", Rhydon);
-
-        // Imprimir los puntos de vida de los Pokémones
-        System.out.println(Rhydon.getNombre() + ": HP " + Rhydon.getHP());
-        System.out.println(Noibat.getNombre() + ": HP " + Noibat.getHP());
-    }
