@@ -1,15 +1,19 @@
 package Pokemon;
 public class Pokemon {
+    private int hp;
     private int level;
     private String Nombre;
     private String TipoPokemon;
 
     public Pokemon(String nombre, String tipo, int nivel) {
+        this.hp = 100;
         this.Nombre = Nombre;
         this.Tipo = TipoPokemon;
         this.level = level;
     }
-
+    public int getHP() {
+        return hp;
+    }
     public String getNombre() {
         return nombre;
     }
